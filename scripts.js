@@ -21,7 +21,7 @@ const messages = [
         bubble.style.left = left + "vw";
         bubble.style.top = top + "vh";
         
-        const container = document.getElementById("bubbles-text");
+        const container = document.getElementById("bubbles-text"); // Corrected ID
         container.appendChild(bubble);
 
         setTimeout(() =>{
@@ -29,12 +29,12 @@ const messages = [
             
             if (rect.right > window.innerWidth){
                 const newLeft = window.innerWidth - rect.width -10;
-                bubble.style.left = '$(newLeft)px';
+                bubble.style.left = `${newLeft}px`; // Corrected template literal
             }
             
             if (rect.bottom > window.innerHeight){
                 const newTop = window.innerHeight - rect.height - 10;
-                bubble.style.top - '$(newTop)px';
+                bubble.style.top = `${newTop}px`; // Corrected template literal
             }
 
             if (rect.left < 0){
