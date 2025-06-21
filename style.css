@@ -135,7 +135,7 @@ body {
 .bubbles:nth-child(4){ left: 70%; animation-duration: 9s;}
 .bubbles:nth-child(5){ left: 90%; animation-duration: 10s;}
 
-#bubble-text{
+#bubbles-text{ /* Corrected ID from bubble-text to bubbles-text */
     position: absolute;
     width: 100%;
     height: 100%;
@@ -163,14 +163,50 @@ body {
    100% { opacity: 0; transform: scale(1) translateY(-100px);}
 }
 
+/* Media queries for mobile compatibility (telefono) */
 @media (max-width: 768px){
     body{
-        background-size: 100% 100%;
+        background-size: cover; /* Use cover for better mobile background */
         background-position: center top;
     }
 
-    .message {font-size: 20px; padding: 20px;}
-    .charming-text {font-size: 916px; padding: 8px 16px;}
-    .flowers {font-size: 25px;}
-    .bubbles {font-size: 20px;}
+    .message {
+        font-size: 30px; /* Reduced font size for mobile */
+        padding: 15px;
+    }
+    
+    .text-bubble { /* Adjusted for better visibility on mobile */
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    /* Adjust font sizes for other elements if they are visible on mobile */
+    .hearts {
+        font-size: 30px;
+    }
+    .flowers {
+        font-size: 20px;
+    }
+    .bubbles {
+        font-size: 18px;
+    }
+    .charming-text {
+        font-size: 14px; /* Adjusting the value here as it was '916px' which seems like a typo */
+        padding: 8px 16px;
+    }
+}
+
+/* For even smaller screens like very narrow phones */
+@media (max-width: 480px) {
+    .message {
+        font-size: 20px;
+        padding: 10px;
+    }
+    .text-bubble {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    .charming-text {
+        font-size: 12px;
+    }
 }
